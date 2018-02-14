@@ -36,9 +36,15 @@ _Note :_ you can rebuild all Docker images by running:
 $ docker-compose build
 ```
 
-# initialize symfony cache in php conatiner first
+# Give host cache file 777 AND initialize symfony cache in php conatiner first
 
 ```
+# in your host machine
+chmod -R 777 var/cache/
+```
+
+```
+# in php docker container
 composer run-script post-update-cmd
 php bin/console cache:warmup
 mkdir var/cache/dev/profiler
