@@ -1,3 +1,17 @@
+
+
+
+# This Project is Depreciated, Cannot build a symfony 4 using docker `eko/docker-symfony`
+
+
+
+
+
+
+
+
+
+
 docker-symfony
 ==============
 
