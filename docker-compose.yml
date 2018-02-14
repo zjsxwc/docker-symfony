@@ -11,6 +11,7 @@ services:
             MYSQL_PASSWORD: symfony
     php:
         build: ./php-fpm
+        user: "1000:50"
         ports:
             - "9000:9000"
         volumes:
