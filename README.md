@@ -36,6 +36,14 @@ _Note :_ you can rebuild all Docker images by running:
 $ docker-compose build
 ```
 
+# initialize symfony cache in php conatiner first
+
+```
+composer run-script post-update-cmd
+php bin/console cache:warmup
+mkdir var/cache/dev/profiler
+```
+
 # How it works?
 
 Here are the `docker-compose` built images:
