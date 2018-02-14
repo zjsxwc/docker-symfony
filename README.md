@@ -21,6 +21,10 @@ Make sure you adjust `database_host` in `parameters.yml` to the database contain
 Then, run:
 
 ```bash
+$ sudo useradd -G docker  www
+$ sudo usermod -aG docker www
+$ sudo service docker restart
+$ newgrp - docker
 $ docker-compose up # in your prod user like `www`
 ```
 
@@ -29,7 +33,7 @@ You are done, you can visit your Symfony application on the following URL: `http
 _Note :_ you can rebuild all Docker images by running:
 
 ```bash
-$ sudo docker-compose build
+$ docker-compose build
 ```
 
 # How it works?
